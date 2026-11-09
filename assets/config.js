@@ -38,8 +38,8 @@ window.FLOXOV_CONFIG = {
   // Add the Supabase project URL and public anon/publishable key to enable live voting.
   // Never put a service-role key in this frontend configuration.
   reputation: {
-    supabaseUrl: "",
-    supabaseAnonKey: ""
+    supabaseUrl: "https://vobqvzhwgoehjbbfukhs.supabase.co/",
+    supabaseAnonKey: "sb_publishable_jki42MlKiQsW5ae1b4ijjg_2SSJ2duM"
   },
 
   // PROFILE AVATAR ---------------------------------------------------------
