@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <meta name="robots" content="noindex, follow">
+  <meta name="description" content="404 — Page not found | FLOXOV">
+  <title>404 — Page Not Found | FLOXOV</title>
+  <style>
+    :root { color-scheme: dark; background: #080808; }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; min-height: 100%; margin: 0; background: #080808; }
+    body { min-height: 100svh; overflow: hidden; }
+    main {
+      width: 100%;
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      padding: clamp(0px, 2vw, 24px);
+      background: #080808;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      max-width: 1672px;
+      max-height: calc(100svh - 2 * clamp(0px, 2vw, 24px));
+      object-fit: contain;
+      object-position: center;
+    }
+    @media (max-width: 600px) {
+      main { padding: 0; }
+      img { max-height: 100svh; }
+    }
+  </style>
+</head>
+<body>
+  <main aria-label="FLOXOV page not found">
+    <img id="floxov-404-art" alt="FLOXOV — 404, Page Not Found" width="1672" height="941">
+  </main>
+  <script>
+    // GitHub project pages use /floxov/; a custom domain uses the domain root.
+    const basePath = location.hostname.toLowerCase().endsWith("github.io")
+      ? "/floxov/"
+      : "/";
+    document.getElementById("floxov-404-art").src = `${basePath}assets/404-page.webp`;
+  </script>
+</body>
+</html>
