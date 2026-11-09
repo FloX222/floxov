@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080808">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="A personal space by FLOXOV for technology, design, and digital work.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FLOXOV — Personal Website">
+  <meta property="og:description" content="A personal space for technology, design, and digital work.">
+  <meta property="og:image" content="./assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:image" content="./assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FLOXOV — Personal Website">
+  <meta name="twitter:description" content="A personal space for technology, design, and digital work.">
+  <title>FLOXOV — Personal Website</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Critical fallback styles: preserve the FLOXOV visual baseline if an external stylesheet is temporarily unavailable. -->
+  <style>
+    html,body{margin:0;min-width:320px;max-width:100%;background:#080808;color:#f4f4f4;font-family:Manrope,Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    body{overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}img,svg{display:block;max-width:100%}[hidden]{display:none!important}
+    .contact-direction svg{width:88px;height:18px;fill:none;stroke:currentColor;stroke-width:1.15}
+    .button-contact svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6}
+  </style>
+  <link rel="stylesheet" href="./assets/styles.css">
+  <script>
+    (() => {
+      const root = document.documentElement;
+      let language = "";
+      root.dataset.theme = "dark";
+      root.style.colorScheme = "dark";
+      try {
+        language = localStorage.getItem("floxov-language") || "";
+      } catch (_) {}
+      if (language !== "ru" && language !== "en") {
+        const browserLanguage = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+        language = browserLanguage.toLowerCase().startsWith("ru") ? "ru" : "en";
+      }
+      root.dataset.language = language;
+      root.lang = language;
+    })();
+  </script>
+  <script src="./assets/config.js" defer></script>
+  <script src="./assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+  <header class="site-header" data-header>
+    <div class="shell header-inner">
+      <a class="brand" href="#home" aria-label="FLOXOV home" data-i18n-aria-label="brandHome">
+        <span class="brand-mark" data-brand-mark aria-hidden="true" hidden>
+          <img class="brand-logo-image" data-brand-logo alt="" hidden>
+        </span>
+        <span class="brand-name" data-brand-name data-profile-name>FLOXOV</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Main navigation" data-i18n-aria-label="navLabel">
+        <a class="nav-link is-active" href="#home" data-nav="home" aria-current="location" data-i18n="navHome">Home</a>
+        <a class="nav-link" href="#contact" data-nav="contact" data-i18n="navContact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="language-switch" role="group" aria-label="Choose language" data-i18n-aria-label="languageLabel">
+          <span class="language-switch-indicator" aria-hidden="true"></span>
+          <button type="button" class="language-option is-active" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" class="language-option" data-language="ru" aria-pressed="false">RU</button>
+        </div>
+        <button class="icon-button menu-toggle" type="button" data-menu-toggle aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-navigation" data-i18n-aria-label="menuOpen">
+          <span class="menu-lines" aria-hidden="true"><i></i><i></i></span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-navigation" aria-label="Mobile navigation" data-i18n-aria-label="mobileNavLabel" hidden>
+      <a href="#home" data-nav="home" data-i18n="navHome">Home</a>
+      <a href="#contact" data-nav="contact" data-i18n="navContact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero-section page-section" id="home" data-section="home">
+      <div class="hero-noise" aria-hidden="true"></div>
+
+      <div class="hero-flipper-stage" data-hero-video-stage aria-hidden="true">
+        <img
+          class="hero-flipper-poster"
+          data-hero-video-poster
+          src="./assets/flipper-dark-poster.webp"
+          alt=""
+          loading="eager"
+          decoding="async"
+        >
+        <video
+          class="hero-flipper-video"
+          data-hero-video
+          muted
+          autoplay
+          loop
+          playsinline
+          preload="auto"
+          poster="./assets/flipper-dark-poster.webp"
+          aria-hidden="true"
+          tabindex="-1"
+          disablepictureinpicture
+        ></video>
+      </div>
+      <div class="shell hero-grid">
+        <div class="hero-copy-column" data-reveal>
+          <h1 class="hero-title hero-role-title">
+            <span data-i18n="heroRoleLineOne">Web Designer</span>
+          </h1>
+          <p class="hero-description" data-i18n="heroDescription">A personal portfolio and digital business card, created to showcase my work and provide a simple way to connect with me.</p>
+          <div class="hero-actions">
+            <a class="button button-primary button-contact" href="#contact">
+              <span data-i18n="heroContact">Get in touch</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <div class="profile-tile" data-profile-frame role="img" tabindex="0" data-i18n-aria-label="avatarGlitchLabel" aria-label="FLOXOV avatar. Hover or focus to trigger a brief glitch effect.">
+            <img
+              class="profile-photo"
+              data-profile-image
+              alt="FLOXOV visual cover"
+              loading="eager"
+              decoding="async"
+              hidden
+            >
+            <img class="profile-glitch-layer profile-glitch-layer--cyan" data-profile-glitch-layer="cyan" alt="" aria-hidden="true" draggable="false">
+            <img class="profile-glitch-layer profile-glitch-layer--red" data-profile-glitch-layer="red" alt="" aria-hidden="true" draggable="false">
+            <video
+              class="profile-video"
+              data-profile-video
+              muted
+              loop
+              playsinline
+              autoplay
+              preload="metadata"
+              aria-hidden="true"
+              tabindex="-1"
+              hidden
+            ></video>
+            <span class="profile-media-fallback" aria-hidden="true"></span>
+          </div>
+
+          <section class="reputation-widget" data-reputation-widget role="region" data-i18n-aria-label="repTitle" aria-label="FLOXOV reputation">
+            <div class="reputation-score-row">
+              <strong class="reputation-score" data-reputation-score aria-live="polite" aria-atomic="true" data-i18n-aria-label="repScoreLabel" aria-label="Current reputation score">0</strong>
+            </div>
+            <div class="reputation-vote-actions" role="group" data-i18n-aria-label="repVoteGroupLabel" aria-label="Vote on FLOXOV reputation">
+              <button class="reputation-vote" type="button" data-reputation-vote="1" data-vote="1" data-selected="false" disabled data-i18n-aria-label="repLikeLabel" data-i18n-title="repLikeLabel" aria-label="Increase FLOXOV reputation">
+                <span aria-hidden="true">+</span>
+              </button>
+              <button class="reputation-vote" type="button" data-reputation-vote="-1" data-vote="-1" data-selected="false" disabled data-i18n-aria-label="repDislikeLabel" data-i18n-title="repDislikeLabel" aria-label="Decrease FLOXOV reputation">
+                <span aria-hidden="true">−</span>
+              </button>
+            </div>
+            <p class="reputation-status" data-reputation-status role="status" aria-live="polite" data-i18n="repUnavailable">Voting is unavailable until the backend is configured.</p>
+            <p class="reputation-cooldown" data-reputation-cooldown hidden></p>
+          </section>
+        </div>
+      </div>
+
+
+      <a class="hero-scroll" href="#contact"><span data-i18n="scrollContact">Scroll to contact</span><span class="scroll-line" aria-hidden="true"></span></a>
+    </section>
+
+      <section class="contact-section page-section" id="contact" data-section="contact">
+    <div class="shell">
+      <div class="contact-panel">
+        <div class="contact-video-poster" data-contact-video-poster aria-hidden="true" hidden></div>
+        <video
+          class="contact-background-video"
+          data-contact-background-video
+          muted
+          loop
+          playsinline
+          autoplay
+          preload="metadata"
+          aria-hidden="true"
+          tabindex="-1"
+          hidden
+        ></video>
+        <div class="contact-video-overlay" data-contact-video-overlay aria-hidden="true" hidden></div>
+        <div class="contact-copy" data-reveal>
+          <h2 data-i18n="contactTitle">По поводу сотрудничества</h2>
+          <p data-i18n="contactDescription">Открыт к интересным проектам и предложениям о сотрудничестве.</p>
+          <div class="contact-direction" aria-hidden="true">
+            <svg width="88" height="18" viewBox="0 0 88 18" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+              <path d="M1 9h80M72 1l9 8-9 8"/>
+            </svg>
+          </div>
+        </div>
+        <div class="contact-actions" data-reveal>
+          <div id="contact-methods" class="contact-methods">
+            <p class="contact-unavailable" data-i18n="contactUnavailable">Контактные данные пока не настроены.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a class="footer-brand" href="#home"><span data-profile-name>FLOXOV</span><span>.</span></a>
+      <p data-i18n="footerCopyright">© 2021 FLOXOV</p>
+      <div class="footer-links">
+        <a href="#home" data-i18n="navHome">Home</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <a href="http://www.dnsExit.com" target="_blank" rel="noopener noreferrer">DNS Powered by DNS EXIT.COM</a>
+      </div>
+      <a class="back-top" href="#home"><span data-i18n="backTop">Back to top</span><span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <div class="reputation-toast" data-reputation-toast role="status" aria-live="polite" aria-atomic="true" hidden></div>
+
+  <div class="copy-toast" data-copy-toast role="status" aria-live="polite" aria-atomic="true" hidden>
+    <span class="copy-toast-icon" aria-hidden="true">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+        <path d="m5 12.5 4.2 4.2L19 7"/>
+      </svg>
+    </span>
+    <span class="copy-toast-message" data-copy-toast-message></span>
+  </div>
+  <script type="module" src="./assets/reputation.js"></script>
+</body>
+</html>
