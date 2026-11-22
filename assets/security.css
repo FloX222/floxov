@@ -1,0 +1,4 @@
+/* Visible only when optional Cloudflare Turnstile enrollment is enabled. */
+.floxov-verification-overlay{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;padding:24px;background:rgba(0,0,0,.82)}
+.floxov-verification-panel{width:min(100%,390px);min-height:175px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;border:1px solid rgba(255,255,255,.18);border-radius:20px;background:#111;color:#f4f4f4;box-shadow:0 20px 60px rgba(0,0,0,.55);font:500 15px/1.5 Manrope,system-ui,sans-serif;text-align:center}
+.floxov-verification-panel p{margin:0}
