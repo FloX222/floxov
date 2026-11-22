@@ -1,0 +1,42 @@
+/* FLOXOV floating crown — intentionally independent of the CRT/glitch clipping context. */
+.hero-visual > .floxov-crown {
+  position: absolute;
+  z-index: 7;
+  top: var(--crown-top, 0px);
+  left: var(--crown-left, 0px);
+  width: var(--crown-width, 220px);
+  aspect-ratio: 420 / 240;
+  pointer-events: none;
+  user-select: none;
+  overflow: visible;
+  opacity: 0;
+  transition: opacity .36s ease;
+  contain: layout style;
+}
+.hero-visual > .floxov-crown.is-ready { opacity: 1; }
+.floxov-crown-float {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 70%;
+  animation: floxov-crown-levitate 3.8s cubic-bezier(.45,.03,.55,.97) infinite alternate;
+  will-change: transform;
+}
+.floxov-crown-image, .floxov-crown-video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+.floxov-crown-video[hidden], .floxov-crown-image[hidden] { display: none !important; }
+@keyframes floxov-crown-levitate {
+  from { transform: translate3d(0, 3px, 0) rotate(-1.4deg); }
+  to { transform: translate3d(0, -5px, 0) rotate(1.4deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .floxov-crown-float { animation: none !important; will-change: auto; }
+}
