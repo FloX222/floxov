@@ -1,0 +1,11 @@
+/* FLOXOV Planet Earth: scoped styles only. No changes to hero/portfolio/crown. */
+.floxov-earth-section{position:relative;padding:clamp(46px,7vw,104px) 0;background:#080808;isolation:isolate}
+.floxov-earth-section .shell{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+.floxov-earth-card{position:relative;width:100%;height:clamp(350px,45vw,560px);overflow:hidden;isolation:isolate;border:1px solid rgba(155,183,207,.19);border-radius:clamp(22px,3vw,34px);background:radial-gradient(ellipse at 57% 55%,#111924 0%,#090d14 51%,#05070b 100%);box-shadow:0 28px 72px rgba(0,0,0,.38),inset 0 1px rgba(255,255,255,.025)}
+.floxov-earth-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+.floxov-earth-status{position:absolute;bottom:8%;left:7%;z-index:2;font:500 12px/1.5 'DM Mono',ui-monospace,monospace;letter-spacing:.12em;color:#8d9aa8;pointer-events:none}
+.floxov-earth-time{display:block;margin-top:7px;font-size:17px;letter-spacing:.035em;color:#f0f3f7}
+.floxov-earth-fallback{position:absolute;inset:0;display:none;place-items:center;color:#c4ccd3;font-size:13px}
+.floxov-earth-card[data-unavailable="true"] .floxov-earth-fallback{display:grid}
+@media(max-width:680px){.floxov-earth-section{padding:45px 0}.floxov-earth-section .shell{width:calc(100% - 28px)}.floxov-earth-card{height:380px;border-radius:22px}.floxov-earth-status{bottom:6%;left:7%}}
+@media(prefers-reduced-motion:reduce){.floxov-earth-card{scroll-behavior:auto}}
