@@ -1,4 +1,4 @@
-# FLOXOV — Premium Personal Website
+# Floxov - Bio
 
 A responsive, bilingual personal website built with vanilla HTML, CSS, and JavaScript. The current experience is intentionally focused on three elements: the Home / Hero section, Contact section, and a minimal footer.
 
